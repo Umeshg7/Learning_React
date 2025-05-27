@@ -4,8 +4,11 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(1)
 
+  const clickMe = ()=>{
+    alert("Button Clicked")
+  }
   return (
     <>
       <div>
@@ -16,8 +19,8 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1 className='text-red-500'>Vite + React</h1>
-      <div className="card">
+      <h1 className='text-red-500' onClick={clickMe}>Vite + React</h1>
+      <div className="card bg-red-100">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
